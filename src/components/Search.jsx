@@ -39,10 +39,13 @@ const Search = () => {
     };
     return(
     <>
-        <h1 className="mt-5 text-center main-heading">Amay Project<br/><br/>
+        <h1 className="mt-5 text-center main-heading">Search Project<br/><br/>
+        <div id="amay">
+            <button className="btn1">Logout</button>
+        </div>
         <input type="text"  onChange={getSearchterm} placeholder="seacrh here" id="search" defaultValue='mountain'></input><br></br></h1>
         <hr />
-        
+     
         <div className="menu-tabs container">
             <div className="menu-tab d-flex justify-content-around"><br/>
                 <button className="btn btn-warning" onClick={()=>filterItem('Mountain')}className="buttons">Mountains</button>
@@ -65,7 +68,7 @@ const Search = () => {
 
 
 
-                                    <div className="col-item1 col-12 col-md-6 col-lg-6 col-xl-4">
+                                   <div className="col-item1 col-12 col-md-6 col-lg-6 col-xl-4">
                                         <div className="row Item-inside">
                                                 <div className="col-12 col-md-12 col-lg-4 imd-div">
                                                     <img src ={image}  className="img-sec"/>
@@ -93,4 +96,20 @@ const Search = () => {
     )
 }
 
-export default Search;
+ export default Search;
+// export const LogoutButton = () => {
+
+//     const [loggedOut, setLoggedOut] = useState(false)
+  
+//     const logout = () => {
+//       localStorage.removeItem("amay")
+//       setLoggedOut(true)
+  
+//     };
+  
+//     if (loggedOut) {
+//       return <Redirect to="/" push={true} />
+//     }
+  
+//     return <Button onClick={logout}>LogOut</Button>;
+//   };

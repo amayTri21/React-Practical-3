@@ -1,5 +1,5 @@
 import React from 'react'
-import { Redirect,Route } from 'react-router-dom'
+import { Redirect,Route,Link } from 'react-router-dom'
 import Search from './Search';
 
 
@@ -19,7 +19,8 @@ const Login = () => {
         }
         else if(email1==login.email && pass1==login.password){
 
-            <Redirect to ="/search" component={Search}></Redirect>
+         
+      alert("sucess")
          
         }
         else{
@@ -32,14 +33,14 @@ const Login = () => {
         <div>
 
 <div className="loginBox">
-            <form>
+            <form onSubmit={validate}>
 
             <label>Email</label><br></br>
           <input type="text" name="name" placeholder=" Enter Email" id ="email"></input><br></br>
           <label>Password</label><br></br>
           <input type="password" name="name" placeholder=" Enter Password" id="password"></input>
 
-          <button className="btn"onClick={validate}>Login</button>
+          <button className="btn">Login</button>
              </form>
         </div>
         </div>

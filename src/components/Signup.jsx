@@ -86,11 +86,13 @@ var amay ={
              onChange={e => Setpassword(e.target.value)}/><br></br>
           <button className="btn"onClick={validate}>Register</button><br></br>
           <p>Already have an account?</p>
-          <Link to="/login">Login here</Link><br/>
+          <button >
+          <Link to="/login" className="b1">Login here</Link><br/>
+          </button><br/><br/>
 
-          <p>Search</p>
-          <Link to="/search">Search here</Link><br/>
-         
+          <button >
+          <Link to="/search" className="b1">Search here</Link><br/>
+         </button>
         
 
             </form>

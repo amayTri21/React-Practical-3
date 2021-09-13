@@ -48,3 +48,13 @@ input[type=text]:focus, input[type=password]:focus {
   width: 50%;
   opacity: 0.9;
 }
+.b1{
+  background-color: rgb(77, 204, 221);
+  width:50px;
+}
+.flex-container > div {
+  background-color: #f1f1f1;
+  margin: 10px;
+  padding: 20px;
+  font-size: 30px;
+}
