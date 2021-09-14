@@ -1,6 +1,6 @@
-import React, {useState,useRef} from 'react';
+import React, {useState,Redirect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
+import { Route,Link,useHistory } from 'react-router-dom'
 import Menu from "./Menu";
 import Mountain from './mountain';
 import '../search.css';
@@ -9,8 +9,11 @@ const Search = () => {
     
     const[items,setItems] = useState(Mountain);
     const[filter,setfilter] = useState('');
-
-
+    var  history = useHistory();
+    
+    var jsonString = localStorage.getItem("amay");
+    var login = JSON.parse(jsonString);
+    
 
     const filterItem=(categItem)=>{
        
@@ -20,6 +23,14 @@ const Search = () => {
 
         setItems(updatedItems);
     }
+
+    const logout = () => {
+                    
+         localStorage.clear()
+         history.push('/')
+
+                      };
+
     const getSearchterm = (event) =>{
         const searchWord = event.target.value;
         
@@ -31,20 +42,25 @@ const Search = () => {
 
     if (searchWord === "") {
         setItems([]);
-      } else {
+      } 
+      else {
         setItems(newFilter);
       }
    
         
     };
     return(
+        
     <>
         <h1 className="mt-5 text-center main-heading">Search Project<br/><br/>
-        <div id="amay">
-            <button className="btn1">Logout</button>
+        <div >
+            <button className="b2" onClick={logout}>Logout</button>
+            <p className="name">{login.name}</p>
         </div>
+      
         <input type="text"  onChange={getSearchterm} placeholder="seacrh here" id="search" defaultValue='mountain'></input><br></br></h1>
-        <hr />
+        <hr/>
+     
      
         <div className="menu-tabs container">
             <div className="menu-tab d-flex justify-content-around"><br/>
@@ -68,7 +84,7 @@ const Search = () => {
 
 
 
-                                   <div className="col-item1 col-12 col-md-6 col-lg-6 col-xl-4">
+                                    <div className="col-item1 col-12 col-md-6 col-lg-6 col-xl-4">
                                         <div className="row Item-inside">
                                                 <div className="col-12 col-md-12 col-lg-4 imd-div">
                                                     <img src ={image}  className="img-sec"/>
@@ -97,19 +113,3 @@ const Search = () => {
 }
 
  export default Search;
-// export const LogoutButton = () => {
-
-//     const [loggedOut, setLoggedOut] = useState(false)
-  
-//     const logout = () => {
-//       localStorage.removeItem("amay")
-//       setLoggedOut(true)
-  
-//     };
-  
-//     if (loggedOut) {
-//       return <Redirect to="/" push={true} />
-//     }
-  
-//     return <Button onClick={logout}>LogOut</Button>;
-//   };

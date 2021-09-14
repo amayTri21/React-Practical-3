@@ -7,8 +7,8 @@ body{
 }
 
 .loginBox {
-  width: 30%;
-  height: 150%;
+  width: 40%;
+  height: 10%;
   text-align: center;
   position: relative;
   left: 50%;
@@ -34,12 +34,12 @@ input[type=text],input[type=password],input[type=number],input[type=email] {
 
 
 input[type=text]:focus, input[type=password]:focus {
-  background-color: #ddd;
+  background-color: rgb(38, 238, 228);
   outline: none;
-}
+  }
 
-.btn {
-  background-color: red;
+.btns{
+  background-color: rgba(255, 0, 0, 0.87);
   color: white;
   padding: 16px 20px;
   margin: 8px 0;
@@ -57,4 +57,11 @@ input[type=text]:focus, input[type=password]:focus {
   margin: 10px;
   padding: 20px;
   font-size: 30px;
+}
+.login{
+  text-align: center;
+  font-style:italic;
+  color:blue;
+  position: relative;
+  top: 65px;
 }

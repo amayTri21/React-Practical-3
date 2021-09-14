@@ -1,9 +1,13 @@
 import React from 'react'
-import { Redirect,Route,Link } from 'react-router-dom'
+import { Redirect,Route,Link,useHistory } from 'react-router-dom'
 import Search from './Search';
+// import disableBrowserBackButton from 'disable-browser-back-navigation';
+
 
 
 const Login = () => {
+    const history = useHistory();
+
 
 
     const validate = () =>{
@@ -19,9 +23,11 @@ const Login = () => {
         }
         else if(email1==login.email && pass1==login.password){
 
-         
-      alert("sucess")
-         
+            history.push({
+                pathname: '/search'
+      
+              }
+              );   
         }
         else{
             alert("failure")
@@ -31,16 +37,17 @@ const Login = () => {
     
     return (
         <div>
+            <h1 className="login">Login Form</h1>
 
 <div className="loginBox">
-            <form onSubmit={validate}>
+            <form >
 
             <label>Email</label><br></br>
           <input type="text" name="name" placeholder=" Enter Email" id ="email"></input><br></br>
           <label>Password</label><br></br>
-          <input type="password" name="name" placeholder=" Enter Password" id="password"></input>
+          <input type="password" name="name" placeholder=" Enter Password" id="password"></input><br/>
 
-          <button className="btn">Login</button>
+          <button className="btns" onClick={validate}>Login</button>
              </form>
         </div>
         </div>

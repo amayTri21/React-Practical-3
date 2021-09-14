@@ -63,4 +63,49 @@
 
   }
 
- 
+  .btns{
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 30%;
+    height: 10%;
+    opacity: 0.9;
+  }
+  .b1{
+    background-color: blue;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    height: 10%;
+    opacity: 0.9;
+    position:relative;
+    left:500px
+  }
+  .b2{
+    font-size:20px ;
+    background-color: rgb(217, 255, 0);
+    color: white;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    height: 10%;
+    opacity: 0.9;
+    position:relative;
+    left:400px
+    
+
+  }
+ .name{
+  font-size:20px ;
+  position:relative;
+  left:400px
+
+ }

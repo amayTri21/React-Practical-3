@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect, Route, Router, Switch } from 'react-router'
-import { Link } from 'react-router-dom'
+import { Link,useHistory} from 'react-router-dom'
 import Login from './Login'
 
 const Signup = () => {
@@ -11,7 +11,7 @@ const[name,Setname]=useState("")
 const[mobile,Setmobile]=useState("")
 const[email,Setemail]=useState("")
 const[password,Setpassword]=useState("")
-
+const history = useHistory()
 var amay ={
    name:name,
    mobile:mobile,
@@ -57,7 +57,7 @@ var amay ={
  
              else{
      
-          alert("registeration sucess");
+          history.push('/login')
           return true;
     
              } 
@@ -67,13 +67,13 @@ var amay ={
 
     return (
        <div>
-           
+           <h1 className="login">SignUp</h1>
             <div className="loginBox">
             <form>
 
              <label>Name</label><br></br>   
-            <input class="fname" type="text" placeholder=" Enter Full name" id="name" 
-               onChange={e => Setname(e.target.value)}/><br></br>
+            <input class="fname" type="text" placeholder=" Enter First name" id="name" 
+               onChange={e => Setname(e.target.value)}/ ><br></br>
              
           <label>Email</label><br></br>
           <input type="text"  placeholder=" Enter Email" id ="email"
@@ -84,15 +84,12 @@ var amay ={
           <label>Password</label><br></br>
           <input type="password" placeholder=" Enter Password" id="password"
              onChange={e => Setpassword(e.target.value)}/><br></br>
-          <button className="btn"onClick={validate}>Register</button><br></br>
-          <p>Already have an account?</p>
-          <button >
-          <Link to="/login" className="b1">Login here</Link><br/>
-          </button><br/><br/>
+          <button className="btns"onClick={validate}>Register</button><br></br>
+          
 
-          <button >
-          <Link to="/search" className="b1">Search here</Link><br/>
-         </button>
+          {/* <button className="btns" >
+          <Link to="/search" >Search here</Link><br/>
+         </button> */}
         
 
             </form>
