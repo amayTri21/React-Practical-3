@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Redirect, Route, Router, Switch } from 'react-router'
-import { Link,useHistory} from 'react-router-dom'
+import { Link,useHistory,withRouter} from 'react-router-dom'
 import Login from './Login'
 
 const Signup = () => {
@@ -98,5 +98,5 @@ var amay ={
     )
 }
 
-export default Signup
+export default withRouter(Signup)
 

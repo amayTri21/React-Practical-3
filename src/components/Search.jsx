@@ -1,6 +1,6 @@
 import React, {useState,Redirect} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Route,Link,useHistory } from 'react-router-dom'
+import { Route,Link,useHistory,withRouter } from 'react-router-dom'
 import Menu from "./Menu";
 import Mountain from './mountain';
 import '../search.css';
@@ -52,7 +52,7 @@ const Search = () => {
     return(
         
     <>
-        <h1 className="mt-5 text-center main-heading">Search Project<br/><br/>
+        <h1 className="mt-5 text-center main-heading">
         <div >
             <button className="b2" onClick={logout}>Logout</button>
             <p className="name">{login.name}</p>
@@ -112,4 +112,4 @@ const Search = () => {
     )
 }
 
- export default Search;
+ export default  withRouter(Search);

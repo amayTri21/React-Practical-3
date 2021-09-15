@@ -1,5 +1,5 @@
 import React from 'react'
-import { Redirect,Route,Link,useHistory } from 'react-router-dom'
+import { Redirect,Route,Link,useHistory,withRouter } from 'react-router-dom'
 import Search from './Search';
 // import disableBrowserBackButton from 'disable-browser-back-navigation';
 
@@ -54,4 +54,4 @@ const Login = () => {
     )
 }
 
-export default Login
+export default withRouter( Login);
