@@ -55,7 +55,7 @@ const Search = () => {
         <h1 className="mt-5 text-center main-heading">
         <div >
             <button className="b2" onClick={logout}>Logout</button>
-            <p className="name">{login.name}</p>
+            <p className="name"> Welcome  {login.name}.</p>
         </div>
       
         <input type="text"  onChange={getSearchterm} placeholder="seacrh here" id="search" defaultValue='mountain'></input><br></br></h1>

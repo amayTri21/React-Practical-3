@@ -30,7 +30,7 @@ var amay ={
         var number=document.getElementById("number").value;  
         var email=document.getElementById("email").value; 
         var password=document.getElementById("password").value; 
-        var letters = /^[A-Za-z]+$/;  
+        var letters = /^[A-Z a-z]+$/;  
         var phoneno = /^[6-9]\d{0,10}$/
         
 
