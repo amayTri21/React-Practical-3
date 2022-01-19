@@ -32,6 +32,7 @@ var amay ={
         var password=document.getElementById("password").value; 
         var letters = /^[A-Z a-z]+$/;  
         var phoneno = /^[6-9]\d{0,10}$/
+        var password_valid=/^[A-Z a-z 0-9 !@#$%&*()<>]{6,12}$/; 
         
 
         if(name=='' || email=='' || number=='' || password=='' ){  
@@ -53,7 +54,17 @@ var amay ={
              {  
              alert("Enter a number starting from 6 8 7 9");  
        
-             }  
+             } 
+             
+         else if(!password_valid.test(password)) 
+         {
+         alert("Password Must Be 6 to 12 and allowed !@#$%&*()<> character");
+             password.focus();
+             password.style.background = '#f08080';
+             return false;                    
+         
+
+         }
  
              else{
      
@@ -84,7 +95,7 @@ var amay ={
           <label>Password</label><br></br>
           <input type="password" placeholder=" Enter Password" id="password"
              onChange={e => Setpassword(e.target.value)}/><br></br>
-          <button className="btns"onClick={validate}>Register</button><br></br>
+          <button className="btns"onClick={validate}>Register here</button><br></br>
           
 
           {/* <button className="btns" >
