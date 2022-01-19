@@ -35,6 +35,7 @@ function App() {
     <>
       
       <Switch>
+        
                 <Route exact path="/" component={Signup} exact />
                 <Route exact path="/login" component={Login} />
                 <Route exact path="/search" component={Search} />
