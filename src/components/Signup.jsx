@@ -95,7 +95,7 @@ var amay ={
           <label>Password</label><br></br>
           <input type="password" placeholder=" Enter Password" id="password"
              onChange={e => Setpassword(e.target.value)}/><br></br>
-          <button className="btns"onClick={validate}>Register here</button><br></br>
+          <button className="btns"onClick={validate}>Register </button><br></br>
           
 
           {/* <button className="btns" >
